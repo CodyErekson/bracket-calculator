@@ -61,7 +61,7 @@ $teams = array(
     "Montana",
     "South Dakota State",
     "Harvard",
-    "Boise/La Salle",
+    "La Salle",
     "Valparaiso",
     "Northwestern State",
     "Florida Gulf Coast University",
@@ -73,6 +73,8 @@ $teams = array(
     "Long Island University",
     "North Carolina A&T State University",
 );
+
+sort($teams);
 
 //let's sort out which single numbers beat others
 //7 is a toss up
@@ -163,7 +165,7 @@ while ( $choose ){
 
     $data = fopen("php://stdin", "rb");
 
-    echo "\n\nFinally enter the ISO 8601 formatted (ie 2013-03-19 12:00:00) date and time in the timezone that the game will be played; use military time for the hour, and 16:50:00 (the median time of currently scheduled games) for games not yet scheduled.\n";
+    echo "\n\nFinally enter the ISO 8601 formatted (ie 2013-03-19) date that the game will be played.\n";
     echo $invalid;
 
     $input = '';
@@ -175,7 +177,7 @@ while ( $choose ){
     } 
     fclose($data);
 
-    if ( preg_match('/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/', $input) ){
+    if ( preg_match('/\d{4}-\d{2}-\d{2}/', $input) ){
         $choose = false;
     } else {
         $invalid = "Invalid Option.\n";
@@ -183,6 +185,9 @@ while ( $choose ){
 }
 
 $date = $input;
+
+//let's add the time to the date, just going to use noon
+$date .= "12:00:00";
 
 echo "\n\n" . $teamone . " vs " . $teamtwo . " on " . $date . ":\n\n";
 
