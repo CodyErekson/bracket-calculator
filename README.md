@@ -7,7 +7,7 @@ Numerology based NCAA tournament calculator.
 SUMMARY & USAGE
 ===============
 
-This is my tongue-in-cheek response to those in my office who (IMHO) take things such as the NCAA basketball tournament too seriously and spend too much time researching teams and trying to decide how to fill out their brackets.  Every year we are goaded into joining these competitions that mean *nothing* to those of us who do not follow collegiate basketball.
+This is my tongue-in-cheek response to those in my office who (IMHO) take things such as the NCAA basketball tournament perhaps a bit too seriously and spend too much time researching teams and trying to decide how to fill out their brackets.  Every year we are persuaded to join these competitions that mean *nothing* to those of us who do not follow collegiate basketball.
 
 It is meant to be executed via CLI.  When run, you will be given a numbered list of the current teams (this was written for 2013, I intend to use and update this each year that I work in such an office environment.)  For each game you choose the top line team's number, then the bottom line team's number.  Finally it is necessary to enter the ISO 8601 formatted (ie 2013-03-19 12:00:00) date and time that the game will start in GMT.  The script will then determine and present which team is likely to win.
 
